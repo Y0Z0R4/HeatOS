@@ -3,7 +3,6 @@ kernel_sectors db 0
 desktop_selection db 0
 kickoff_selection db 0
 boot_mode db 0
-text_color db 0x0F
 event_type db 0
 history_next db 0
 history_used db 0
@@ -26,8 +25,6 @@ net_class db 0
 net_subclass db 0
 net_vendor_id dw 0
 net_device_id dw 0
-net_io_base dw 0
-net_mac_address times 6 db 0
 
 rect_char db 0
 rect_attr db 0
@@ -53,4 +50,3 @@ net_vendor_buffer times 8 db 0
 net_device_buffer times 8 db 0
 net_class_buffer times 4 db 0
 net_subclass_buffer times 4 db 0
-net_mac_buffer times 18 db 0

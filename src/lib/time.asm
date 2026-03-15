@@ -11,7 +11,8 @@ capture_boot_ticks:
 
 boot_mode_menu:
     call clear_screen
-    call print_banner
+    mov si, banner_msg
+    call print_string
     mov si, boot_menu_title_msg
     call print_string
     mov si, boot_menu_line1_msg

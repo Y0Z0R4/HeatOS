@@ -1,19 +1,6 @@
-banner_line1  db "                               Welcome to Catnet  ", 0
-banner_line2  db "                             ", 0
-banner_line3  db "                           |\      _,,,---,,_ ", 0
-banner_line4  db "                         ZZZzz /,`.-'`'    -.  ;-;;,_ ", 0
-banner_line5  db "                               |,4-  ) )-,_. ,\ (  `'-'", 0
-banner_line6  db "                               '---''(_/--'  `-'\_) ", 0
-banner_line7  db "                          ══╦════════════════════════╦══", 0
-banner_line8  db "                    ╔═══════╩════════════════════════╩═══════╗", 0
-banner_line9  db "                    ║               Welcome Back             ║", 0
-banner_line10 db "                    ║      ”I mean we kinda lost the src”    ║", 0
-banner_line11 db "                  ╔╗╚═════════════════════════════════════════╗", 0
-banner_line12 db "                  ║╚═══════════════════════════════════════════╝", 0
-banner_line13 db "                 ╔╩═══════════════════════════════════════════╩╗", 0
-banner_line14 db "                 ║   ~ ~ ~ Type H̲E̲L̲P̲ To See Commands ~ ~ ~     ║", 0
-banner_line15 db "                 ║ Copyright © 2025 Catnet All Rights Reserved ║", 0
-banner_line16 db "                 ╚═════════════════════════════════════════════╝", 0
+banner_msg db "================================", 13, 10
+           db " HeatOS 0.5 + Popeye Desktop   ", 13, 10
+           db "================================", 13, 10, 13, 10, 0
 terminal_ready_msg db "Terminal opened from Popeye desktop.", 13, 10, 0
 terminal_hint_msg db "Try: help, net, ping 127.0.0.1, desktop", 13, 10, 13, 10, 0
 prompt_msg db "Heat> ", 0
@@ -235,7 +222,6 @@ net_console_slot_label_msg db "  slot:  ", 0
 net_console_vendor_label_msg db "  id:    vendor 0x", 0
 net_console_device_mid_msg db "  device 0x", 0
 net_console_class_label_msg db "  class: 0x", 0
-net_console_mac_label_msg db "  mac:   ", 0
 net_console_hint_msg db "  qemu: run with NIC (run.cmd does this by default).", 13, 10, 13, 10, 0
 net_console_missing_msg db "  no PCI network adapter found.", 13, 10
                       db "  try QEMU with -nic user,model=ne2k_pci", 13, 10, 13, 10, 0
@@ -245,14 +231,6 @@ ping_stub_msg db "Only loopback ping is implemented in this stage.", 13, 10, 0
 ping_reply_msg db "Reply from 127.0.0.1: bytes=32 time<1ms ttl=255", 13, 10, 0
 ping_loopback_target_msg db "127.0.0.1", 0
 ping_localhost_target_msg db "localhost", 0
-ping_hw_test_msg db "Hardware test packet sent (Raw Ethernet Broadcast).", 13, 10, 0
-
-align 2
-test_packet db 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF ; Dest MAC (Broadcast)
-            db 0xDE, 0xAD, 0xBE, 0xEF, 0x00, 0x01 ; Source MAC (Fake)
-            db 0x08, 0x00 ; Type (IP)
-            times 50 db 0xAA ; Padding
-
 
 arch_msg db "Architecture split:", 13, 10
          db "  kernel: hardware init, timing, memory, pci, services", 13, 10

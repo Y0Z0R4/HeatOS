@@ -36,13 +36,13 @@ start:
     mov [boot_drive], dl
     mov [kernel_sectors], cl
     mov byte [desktop_selection], APP_TERMINAL
-    mov byte [boot_mode], BOOT_MODE_CONSOLE
+    mov byte [boot_mode], BOOT_MODE_DESKTOP
 
     call capture_boot_ticks
     call init_mouse
     call init_network_subsystem
-    ; Default to console session to show the banner
-    jmp terminal_session
+    ; Default flow now boots straight into the desktop environment.
+    jmp desktop_main
 
 
 ; =============================================================================
@@ -53,7 +53,6 @@ start:
 ; --- Hardware Drivers ---------------------------------------------------------
 %include "src/drivers/mouse.asm"       ; Mouse: detect, show/hide cursor, poll
 %include "src/drivers/pci_net.asm"     ; PCI network: NIC scan, status strings
-%include "src/drivers/ne2k.asm"        ; NE2000: RX/TX logic
 
 ; --- Low-level Libraries ------------------------------------------------------
 %include "src/lib/video.asm"           ; VGA text-mode: fill_rect, write_string_at

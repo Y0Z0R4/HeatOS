@@ -1,79 +1,6 @@
 print_banner:
-    mov byte [text_color], 13 ; Light Magenta
-    mov si, banner_line1
+    mov si, banner_msg
     call print_string
-    call print_newline
-    mov si, banner_line2
-    call print_string
-    call print_newline
-
-    mov byte [text_color], 5  ; Magenta
-    mov si, banner_line3
-    call print_string
-    call print_newline
-
-    mov byte [text_color], 1  ; Blue
-    mov si, banner_line4
-    call print_string
-    call print_newline
-
-    mov byte [text_color], 9  ; Light Blue
-    mov si, banner_line5
-    call print_string
-    call print_newline
-
-    mov byte [text_color], 3  ; Cyan
-    mov si, banner_line6
-    call print_string
-    call print_newline
-
-    mov byte [text_color], 11 ; Light Cyan
-    mov si, banner_line7
-    call print_string
-    call print_newline
-
-    mov byte [text_color], 15 ; White
-    mov si, banner_line8
-    call print_string
-    call print_newline
-    mov si, banner_line9
-    call print_string
-    call print_newline
-    mov si, banner_line10
-    call print_string
-    call print_newline
-
-    mov byte [text_color], 11 ; Light Cyan
-    mov si, banner_line11
-    call print_string
-    call print_newline
-
-    mov byte [text_color], 3  ; Cyan
-    mov si, banner_line12
-    call print_string
-    call print_newline
-
-    mov byte [text_color], 9  ; Light Blue
-    mov si, banner_line13
-    call print_string
-    call print_newline
-
-    mov byte [text_color], 1  ; Blue
-    mov si, banner_line14
-    call print_string
-    call print_newline
-
-    mov byte [text_color], 5  ; Magenta
-    mov si, banner_line15
-    call print_string
-    call print_newline
-
-    mov byte [text_color], 13 ; Light Magenta
-    mov si, banner_line16
-    call print_string
-    call print_newline
-
-    mov byte [text_color], 0x0F ; Reset to white
     ret
 
 print_char:
@@ -81,7 +8,7 @@ print_char:
     push bx
     mov ah, 0x0E
     mov bh, 0x00
-    mov bl, [text_color]
+    mov bl, 0x0F
     int 0x10
     pop bx
     pop ax
