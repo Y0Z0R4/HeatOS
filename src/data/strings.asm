@@ -1,14 +1,19 @@
-banner_msg db "                           '---''(_/--'  `-'\_) ", 13, 10
-           db "                          ══╦════════════════════════╦══", 13, 10
-           db "                    ╔═══════╩════════════════════════╩═══════╗", 13, 10
-           db "                    ║               Welcome Back             ║", 13, 10
-           db "                    ║      ”I mean we kinda lost the src”    ║", 13, 10
-           db "                  ╔╗╚═════════════════════════════════════════╗", 13, 10
-           db "                  ║╚═══════════════════════════════════════════╝", 13, 10
-           db "                 ╔╩═══════════════════════════════════════════╩╗", 13, 10
-           db "                 ║   ~ ~ ~ Type H̲E̲L̲P̲ To See Commands ~ ~ ~     ║", 13, 10
-           db "                 ║ Copyright © 2025 Catnet All Rights Reserved ║", 13, 10
-           db "                 ╚═════════════════════════════════════════════╝", 13, 10, 0
+banner_line1  db "                               Welcome to Catnet  ", 0
+banner_line2  db "                             ", 0
+banner_line3  db "                           |\      _,,,---,,_ ", 0
+banner_line4  db "                         ZZZzz /,`.-'`'    -.  ;-;;,_ ", 0
+banner_line5  db "                               |,4-  ) )-,_. ,\ (  `'-'", 0
+banner_line6  db "                               '---''(_/--'  `-'\_) ", 0
+banner_line7  db "                          ══╦════════════════════════╦══", 0
+banner_line8  db "                    ╔═══════╩════════════════════════╩═══════╗", 0
+banner_line9  db "                    ║               Welcome Back             ║", 0
+banner_line10 db "                    ║      ”I mean we kinda lost the src”    ║", 0
+banner_line11 db "                  ╔╗╚═════════════════════════════════════════╗", 0
+banner_line12 db "                  ║╚═══════════════════════════════════════════╝", 0
+banner_line13 db "                 ╔╩═══════════════════════════════════════════╩╗", 0
+banner_line14 db "                 ║   ~ ~ ~ Type H̲E̲L̲P̲ To See Commands ~ ~ ~     ║", 0
+banner_line15 db "                 ║ Copyright © 2025 Catnet All Rights Reserved ║", 0
+banner_line16 db "                 ╚═════════════════════════════════════════════╝", 0
 terminal_ready_msg db "Terminal opened from Popeye desktop.", 13, 10, 0
 terminal_hint_msg db "Try: help, net, ping 127.0.0.1, desktop", 13, 10, 13, 10, 0
 prompt_msg db "Heat> ", 0

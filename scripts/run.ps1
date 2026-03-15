@@ -32,9 +32,6 @@ function Pause-IfNeeded {
 }
 
 try {
-    # Display the banner
-    python (Join-Path $PSScriptRoot "banner.py")
-
     $projectRoot = Split-Path -Parent $PSScriptRoot
     $imagePath = Join-Path $projectRoot "build\Heatos.img"
     $isoPath = Join-Path $projectRoot "build\Heatos.iso"

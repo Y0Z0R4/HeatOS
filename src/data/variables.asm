@@ -3,6 +3,7 @@ kernel_sectors db 0
 desktop_selection db 0
 kickoff_selection db 0
 boot_mode db 0
+text_color db 0x0F
 event_type db 0
 history_next db 0
 history_used db 0
