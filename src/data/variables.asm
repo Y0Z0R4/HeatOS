@@ -26,6 +26,8 @@ net_class db 0
 net_subclass db 0
 net_vendor_id dw 0
 net_device_id dw 0
+net_io_base dw 0
+net_mac_address times 6 db 0
 
 rect_char db 0
 rect_attr db 0
