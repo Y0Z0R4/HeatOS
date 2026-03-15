@@ -1,4 +1,4 @@
-# RushOS, OS made only using VSC agent.
+# HeatOS, OS made only using VSC agent.
 
 ### yes even the README is ai :D
 
@@ -38,7 +38,7 @@ After install, close and reopen your terminal.
 
 ## Build and Run
 
-From the project root (`RushOS`):
+From the project root (`HeatOS`):
 
 ```powershell
 Set-ExecutionPolicy -Scope Process Bypass
@@ -47,7 +47,7 @@ Set-ExecutionPolicy -Scope Process Bypass
 
 That command will:
 1. Assemble `boot.asm` and `kernel.asm`
-2. Create `build\rushos.img`
+2. Create `build\HeatOS.img`
 3. Boot the image in QEMU
 
 If you only want to build:
@@ -92,7 +92,7 @@ Try:
 - The build script auto-calculates how many sectors to load for the current kernel size.
 - The current size limit is 16 sectors (8 KiB), controlled in `scripts/build.ps1` by `maxKernelSectors`.
 
-## Next Steps To Evolve RushOS
+## Next Steps To Evolve HeatOS
 
 - Add your own command handlers in `src/kernel/kernel.asm`.
 - Add memory map and hardware probing.
